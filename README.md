@@ -45,8 +45,8 @@ Known Issues and missing Features
 
 I would like to say thank you to the following people who provided ideas, advices and code to turn honeyd into an IPv6-capable honeypot: 
 
-Niels Provos
-Sebastian Menski
-Oliver Eggert
-Prof. Dr. Thomas Scheffler
-Prof. Dr. Bettina Schnor
+* Niels Provos
+* Sebastian Menski
+* Oliver Eggert
+* Prof. Dr. Thomas Scheffler
+* Prof. Dr. Bettina Schnor
