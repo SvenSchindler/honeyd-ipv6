@@ -1,0 +1,34 @@
+<domain type='qemu'>
+  <name>honeypot</name>
+  <uuid>7816585d-b711-703a-1a1c-78e557e8afea</uuid>
+  <memory>256536</memory>
+  <currentMemory>65536</currentMemory>
+  <vcpu>1</vcpu>
+  <os>
+    <type arch='x86_64'>hvm</type>
+    <boot dev='hd'/>
+  </os>
+  <features>
+    <acpi/>
+  </features>
+  <clock offset='utc'/>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>destroy</on_crash>
+  <devices>
+    <emulator>/usr/bin/qemu-system-x86_64</emulator>
+    <disk type='file' device='disk'>
+      <source file='/path/to/honeypot/files/my-honeypot-vm.img'/>
+    <driver name='qemu' type='qcow2'/>
+      <target dev='hda' bus='ide'/>
+      <address type='drive' controller='0' bus='0' unit='0'/>
+    </disk>
+    <controller type='ide' index='0'/>
+    <input type='mouse' bus='ps2'/>
+  <graphics type='vnc' port='1056'/>
+  <interface type='bridge'>
+     <source bridge='br0'/>
+     <mac address='00:16:3e:1d:b3:4a'/>
+  </interface>
+  </devices>
+</domain>

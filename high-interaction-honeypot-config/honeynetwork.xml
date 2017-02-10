@@ -1,0 +1,14 @@
+<network>
+  <name>honeynetwork</name>
+  <forward/>
+  <bridge name='br0' stp='off' forwardDelay='0' />
+  <ip address='192.168.2.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.2.2' end='192.168.2.254' />
+    </dhcp>
+  </ip>
+  <ip family="ipv6" address="2001:db8:10::1" prefix="64" />
+    <!--dhcp>
+      <range start='2001:db8:10::10' end='2001:db8:99::99' />
+    </dhcp -->
+</network>
